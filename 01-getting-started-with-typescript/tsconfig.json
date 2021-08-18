@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {                     /* Enable incremental compilation */
+    "outDir": "./dist",                              /* Redirect output structure to the directory. */  
+    "baseUrl": "src",                             /* Base directory to resolve non-absolute module names. */
+    "noEmitOnError": true,
+    "lib": ["dom", "ES6"]
+}
