@@ -1,0 +1,1 @@
+type Pet = Dog | Fish
