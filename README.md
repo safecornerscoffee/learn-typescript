@@ -14,6 +14,7 @@
 ## Reference
 
 - [TypeScript HandBook](https://typescript-kr.github.io/)
+- [ESLint Plugin TypeScript](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
 
 ## Backend
 - [ ] [TypeScript 을 사용해 Express , Node.js 세팅](https://hckcksrl.medium.com/typescript-%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4-express-node-js-%EC%84%B8%ED%8C%85-12bbdd62513f)
