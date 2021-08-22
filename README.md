@@ -1,5 +1,49 @@
 # Learn TypeScript
 
+## 환경 설정
+
+```bash
+npm init
+npm install --save-dev typescript eslint
+```
+
+ESlint 설정
+
+```bash
+npx eslint --init
+
+✔ How would you like to use ESLint? · problems
+✔ What type of modules does your project use? · esm
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · browser, node
+✔ What format do you want your config file to be in? · JSON
+```
+
+TypeScript 설정
+
+```bash
+npx tsc --init
+```
+
+tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["ES2017", "DOM"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noEmitOnError": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "esModuleInterop": true
+  }
+}
+```
+
 ## 타입 스크립트 배우기
 
 - [ ] 단숨에 배우는 타입스크립트
