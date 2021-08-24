@@ -11,17 +11,19 @@ export abstract class MessageServer<T> {
 
   protected readonly subscribeToMessages = (ws: WebSocket): void => {
     ws.on('message', (data: WebSocket.Data) => {
-      if (typeof data === 'string') {
-        this.handleMessage(ws, JSON.parse(data));
-      } else {
-        console.log(`Received data of unsupported type.`);
-      }
+      this.handleMessage(ws, JSON.parse(this.ab2str(data)));
     });
+  }
+  
+  private ab2str = (buf) => {
+    return String.fromCharCode.apply(null, new Uint16Array(buf));
   }
 
   private readonly cleanupDeadClients = (): void => {
     this.wsServer.clients.forEach(client => {
-      this.wsServer.clients.delete(client);
+      if (this.isDead(client)) {
+        this.wsServer.clients.delete(client);
+      }
     });
   }
 

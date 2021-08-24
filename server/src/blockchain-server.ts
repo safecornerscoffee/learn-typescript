@@ -72,4 +72,5 @@ export class BlockchainServer extends MessageServer<Message> {
   private get clientIsNotAlone(): boolean {
     return this.clients.size > 1;
   }
+
 }
